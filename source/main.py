@@ -5,12 +5,9 @@
 #
 
 #Normal Imports
-import pygame
-import pygame_gui
-import sys
-import os
-from enum import Enum
-# from superwires import games
+
+
+# from superwires import games (not used currently)
 
 #Imports from other files
 import LibraryInstaller
@@ -24,7 +21,14 @@ libraries = ['pygame', 'pygame_gui']
 # Check and install libraries if necessary
 for library in libraries:
    LibraryInstaller.check_library(library)
-   
+
+#imports from external libraries
+import pygame
+import pygame_gui
+import sys
+import os
+from enum import Enum
+
 # Begin game
 
 pause = False
