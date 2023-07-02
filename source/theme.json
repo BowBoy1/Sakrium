@@ -1,0 +1,55 @@
+{
+  "defaults": {
+    "colours": {
+      "normal_bg": "white",
+      "hovered_bg": "#EFEFEF",
+      "selected_bg": "#DFDFDF",
+      "normal_border": "black",
+      "hovered_border": "black",
+      "disabled_border": "white",
+      "selected_border": "black",
+      "active_border": "black",
+      "normal_text": "black",
+      "hovered_text": "black",
+      "selected_text": "black",
+      "disabled_text": "grey",
+      "active_text": "black"
+    }
+  },
+
+  "#start_button": {
+    "font": {
+      "name": "ABeeZee",
+      "size": "72",
+      "regular_path": "assets/fonts/ABeeZee-Regular.ttf"
+    }
+  },
+
+  "#game_title": {
+    "font": {
+      "name": "ABeeZee",
+      "size": "120",
+      "regular_path": "assets/fonts/ABeeZee-Regular.ttf"
+    }
+  },
+
+  "#pause_overlay": {
+    "colours": {
+      "dark_bg": "#00000080"
+    },
+    "misc": {
+      "border_width": "0"
+    }
+  },
+
+  "#paused_label": {
+    "font": {
+      "name": "ABeeZee",
+      "size": "32",
+      "regular_path": "assets/fonts/ABeeZee-Regular.ttf"
+    },
+    "colours": {
+      "normal_text": "#FFFFFF"
+    }
+  }
+}
