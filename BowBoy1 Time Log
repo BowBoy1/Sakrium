@@ -2,4 +2,5 @@ Time log format:
 Month - Day - Year - Start time - Stop time - Work session time in hours followed by minutes
 Example: 7 - 1 - 2023 - 9:30 AM - 10:43 AM - 1 Hour 13 Mins
 ---------------------------------------------------------------------------------------------
-7 - 1 - 2023 - 9:45 AM - 10:07 AM - 22 Mins
+7 - 1 - 2023 - 9:45 AM - 10:07 AM - 22 mins
+7 - 2 - 2023 - 8:30 AM - 8:40 AM - 10 mins
