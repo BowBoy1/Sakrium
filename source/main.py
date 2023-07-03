@@ -23,6 +23,22 @@ import sys
 import os
 from enum import Enum
 
+class Sakrium(pygame.sprite.Sprite):
+   def __init__(self, image_path):
+      super().__init__()
+      self.image = self.load_image(image_path)
+      self.rect = self.image.get_rect(center=(width // 2, height // 2))
+      self.x = (width - self.image.get_width()) // 2
+      self.y = (height - self.image.get_height()) // 2
+   
+   def load_image(self, path):
+      try:
+         image = pygame.image.load(path).convert_alpha()
+         return image
+      except pygame.error:
+         print("Error loading sakrium:", path)
+         return pygame.Surface((64, 64)) # Return a blank surface as a fallback
+
 # Begin game
 
 pause = False
@@ -73,6 +89,14 @@ ui_by_page = {
    Page.GAME: []
 }
 
+# Sprites
+sakrium = Sakrium(os.path.join(os.getcwd(), "./assets/SakriumTank.png"))
+
+
+all_sprites = pygame.sprite.Group()
+
+all_sprites.add(sakrium)
+
 # Game loop
 while True:
    dt = clock.tick(fps) / 1000
@@ -117,9 +141,11 @@ while True:
    # if not pause:
       # game calculations
       
-   # match page:
-   #    case Page.GAME:
-         # draw the game itself
+   match page:
+      case Page.GAME:
+         all_sprites.draw(screen)
+         
+         screen.blit(sakrium.image or pygame.Surface((64, 64)), sakrium.rect or pygame.Rect((width - 64) // 2, (height - 64) // 2, 64, 64))
    
    manager.draw_ui(screen)
    pygame.display.update()
