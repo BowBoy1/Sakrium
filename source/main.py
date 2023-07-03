@@ -1,19 +1,13 @@
-#
-#SAKRIUM
-#
-#2023 Charlie's Game Jam
-#
+# SAKRIUM
+# 2023 Charlie's Game Jam
 
 #Normal Imports
-
-
 # from superwires import games (not used currently)
 
 #Imports from other files
 import LibraryInstaller
 from consts import *
 
-#running the LibraryInstaller file
 # Libraries to check and install
 # libraries = ['pygame', 'pygame_gui', 'superwires']
 libraries = ['pygame', 'pygame_gui']
@@ -22,7 +16,7 @@ libraries = ['pygame', 'pygame_gui']
 for library in libraries:
    LibraryInstaller.check_library(library)
 
-#imports from external libraries
+# Imports from external libraries
 import pygame
 import pygame_gui
 import sys
@@ -59,7 +53,6 @@ game_title = pygame_gui.elements.UILabel(text="Sakrium", relative_rect=pygame.Re
 start_button = pygame_gui.elements.UIButton(relative_rect=pygame.Rect((490, 285), (300, 150)), text="Play", manager=manager, object_id=pygame_gui.core.ObjectID(class_id="@main_menu", object_id="#start_button"))
 
 # Pause Menu
-
 pause_overlay = pygame_gui.elements.UIPanel(
    relative_rect=pygame.Rect((0, 0), screen_size),
    manager=manager,
